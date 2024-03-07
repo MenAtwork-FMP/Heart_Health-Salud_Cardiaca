@@ -1,7 +1,13 @@
 folder_names:
   logs_main_folder: Logs
+  data_main_folder: Data
+  raw_data_folder: Raw_data
 
 file_names:
   logs_file_name: Logs.log
+  raw_data_file_name: Heart_health-Salud_cardiaca.csv
 
-
+urls:
+  base_url: https://drive.google.com/uc?id=
+  data_url: https://drive.google.com/file/d/1j48kuBVZ70pe_GsT97geOiE8ye7jpc4L/view?usp=drive_link
+            

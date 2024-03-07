@@ -1,1 +1,3 @@
-2024-03-06 16:27:48,637 : INFO : aa02_Dataset.py : end of dataset
+2024-03-06 17:28:17,038 : INFO : aa02_Dataset.py : Dataset module initialized
+2024-03-06 17:28:17,039 : INFO : aa02_Dataset.py : Data loading process started.
+2024-03-06 17:28:19,243 : INFO : aa02_Dataset.py : Data loading completed and saved to the directory Data/raw
