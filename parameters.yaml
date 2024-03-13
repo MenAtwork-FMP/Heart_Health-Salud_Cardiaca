@@ -2,12 +2,31 @@ folder_names:
   logs_main_folder: Logs
   data_main_folder: Data
   raw_data_folder: Raw_data
+  processed_data_folder: Processed_data
+  temp_data_folder: temp_data
+  pipeline_foldername: Pipeline
 
 file_names:
   logs_file_name: Logs.log
   raw_data_file_name: Heart_health-Salud_cardiaca.csv
+  processed_data_file_name: Processed_data.csv
+  temp_data_file_name: temp_data.csv
+  label_transformer_file_name: label_transformer.pkl
+  preprocess_pipeline_filename: preprocess_pipeline.pkl
+  processed_X_train: X_train.csv
+  processed_X_val: X_val.csv
+  processed_y_train: y_train.csv
+  processed_y_val: y_val.csv
 
 urls:
   base_url: https://drive.google.com/uc?id=
   data_url: https://drive.google.com/file/d/1j48kuBVZ70pe_GsT97geOiE8ye7jpc4L/view?usp=drive_link
-            
+
+model_parameters:
+  random_state: 456
+  n_estimators: 100
+  criterion: gini
+  max_depth: None
+  min_samples_split: 2
+  min_samples_leaf: 1
+  test_size: 0.2

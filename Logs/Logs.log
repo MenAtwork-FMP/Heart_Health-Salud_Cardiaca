@@ -1,3 +1,21 @@
-2024-03-06 17:28:17,038 : INFO : aa02_Dataset.py : Dataset module initialized
-2024-03-06 17:28:17,039 : INFO : aa02_Dataset.py : Data loading process started.
-2024-03-06 17:28:19,243 : INFO : aa02_Dataset.py : Data loading completed and saved to the directory Data/raw
+2024-03-12 18:39:34,658 : INFO : aa02_Dataset.py : Dataset module initialized
+2024-03-12 18:39:34,658 : INFO : aa02_Dataset.py : Data loading process started.
+2024-03-12 18:39:36,424 : INFO : aa02_Dataset.py : Data loading completed and saved to the directory Data/raw
+2024-03-12 18:39:38,502 : INFO : aa03_preprocessing.py : Preprocessing module initialized
+2024-03-12 18:39:38,524 : INFO : aa03_preprocessing.py : Removed unnecessary columns from the data.
+2024-03-12 18:39:38,544 : INFO : aa03_preprocessing.py : Blood pressure data adjusted.
+2024-03-12 18:39:38,560 : INFO : aa03_preprocessing.py : BMI calculation added.
+2024-03-12 18:39:38,572 : INFO : aa03_preprocessing.py : Splitted the data into independent and dependent features.
+2024-03-12 18:39:38,584 : INFO : aa03_preprocessing.py : Label encoded.
+2024-03-12 18:39:38,588 : INFO : aa03_preprocessing.py : Splitted the data into the data for training and the data for validation.
+2024-03-12 18:39:38,590 : INFO : aa03_preprocessing.py : Created a pipeline to preprocess the categorical features in the data.
+2024-03-12 18:39:38,590 : INFO : aa03_preprocessing.py : Created a pipeline to preprocess the numerical features in the data.
+2024-03-12 18:39:38,590 : INFO : aa03_preprocessing.py : Combined the preprocess pipelines created for categorical and numerical data preprocessing.
+2024-03-12 18:39:38,601 : INFO : aa03_preprocessing.py : Proccesed train data with complete pipeline.
+2024-03-12 18:39:38,605 : INFO : aa03_preprocessing.py : Proccesed validation data with complete pipeline.
+2024-03-12 18:39:38,609 : INFO : aa03_preprocessing.py : Saved the fitted preprocess pipeline as a python pickle file.
+2024-03-12 18:39:38,618 : INFO : aa03_preprocessing.py : Preprocess X_train saved.
+2024-03-12 18:39:38,621 : INFO : aa03_preprocessing.py : Preprocessed X_val saved
+2024-03-12 18:39:38,624 : INFO : aa03_preprocessing.py : Preprocessed y_train saved
+2024-03-12 18:39:38,626 : INFO : aa03_preprocessing.py : Preprocessed y_val saved
+2024-03-12 18:39:38,627 : INFO : aa03_preprocessing.py : Temp data directories removed.
