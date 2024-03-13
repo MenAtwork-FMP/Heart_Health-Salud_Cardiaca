@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Feche/Documents/GitHub/Heart_Health-Salud_Cardiaca/Heart_Healt-Salud_Cardiaca/mlruns/0/35ee8333a65c4fc1b0da817569a4cfee/artifacts
+end_time: 1710360248286
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 35ee8333a65c4fc1b0da817569a4cfee
+run_name: amazing-bass-520
+run_uuid: 35ee8333a65c4fc1b0da817569a4cfee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710360248043
+status: 3
+tags: []
+user_id: Feche

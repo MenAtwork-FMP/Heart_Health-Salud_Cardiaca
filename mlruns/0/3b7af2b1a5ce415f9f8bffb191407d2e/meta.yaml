@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Feche/Documents/GitHub/Heart_Health-Salud_Cardiaca/Heart_Healt-Salud_Cardiaca/mlruns/0/3b7af2b1a5ce415f9f8bffb191407d2e/artifacts
+end_time: 1710360113561
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b7af2b1a5ce415f9f8bffb191407d2e
+run_name: amusing-moose-693
+run_uuid: 3b7af2b1a5ce415f9f8bffb191407d2e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710360113500
+status: 4
+tags: []
+user_id: Feche

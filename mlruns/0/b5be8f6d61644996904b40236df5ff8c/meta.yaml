@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Feche/Documents/GitHub/Heart_Health-Salud_Cardiaca/Heart_Healt-Salud_Cardiaca/mlruns/0/b5be8f6d61644996904b40236df5ff8c/artifacts
+end_time: 1710360058447
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b5be8f6d61644996904b40236df5ff8c
+run_name: learned-hound-230
+run_uuid: b5be8f6d61644996904b40236df5ff8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710360058382
+status: 4
+tags: []
+user_id: Feche

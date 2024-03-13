@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Feche/Documents/GitHub/Heart_Health-Salud_Cardiaca/Heart_Healt-Salud_Cardiaca/mlruns/0/0a6dde2c3ce44a8b812264400aff9abf/artifacts
+end_time: 1710360387913
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0a6dde2c3ce44a8b812264400aff9abf
+run_name: dazzling-stag-635
+run_uuid: 0a6dde2c3ce44a8b812264400aff9abf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710360387646
+status: 3
+tags: []
+user_id: Feche

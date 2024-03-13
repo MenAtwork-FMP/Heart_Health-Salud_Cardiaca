@@ -5,6 +5,8 @@ folder_names:
   processed_data_folder: Processed_data
   temp_data_folder: temp_data
   pipeline_foldername: Pipeline
+  metrics_folder: Metrics
+  model_folder: Models
 
 file_names:
   logs_file_name: Logs.log
@@ -17,6 +19,9 @@ file_names:
   processed_X_val: X_val.csv
   processed_y_train: y_train.csv
   processed_y_val: y_val.csv
+  metrics_file_name: metrics.json
+  report_filename: classification_report.csv
+  model_file_name: model.joblib
 
 urls:
   base_url: https://drive.google.com/uc?id=
