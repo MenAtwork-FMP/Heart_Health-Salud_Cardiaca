@@ -27,7 +27,7 @@ class WebApp:
         try:
             st.set_page_config(
                 page_title="Heart Attack Risk Assessment",
-                page_icon=":butterfy",
+                page_icon=":butterfly",
                 layout="wide",
                 initial_sidebar_state="expanded",
             )
@@ -44,50 +44,25 @@ class WebApp:
             # Creating an interfact to get inputs from the user
             col1, col2, col3 = st.columns(3, gap='large')
 
-            age = col1.slider('Age', min_value=1,max_value=100, step=1, value=23)
-            height = col1.slider('Height(cm)', min_value=1,max_value=300, step=1, value=150)
-            gender = col2.selectbox('Gender', ['Male', 'Female'])
+            age = col1.slider('Age', min_value=30,max_value=60, step=1, value=35)
+            height = col1.slider('Height(cm)', min_value=155,max_value=183, step=1, value=160)
+            weight = col1.slider('Weight (Kg)', min_value=60,max_value=89, step=1, value=65)
+            cholesterol = col1.slider('Cholesterol(mg/dL)', min_value=50,max_value=300, step=1, value=180)
+            glucose = col1.slider('Glucose(mg/dL)', min_value=75,max_value=100, step=1, value=80)
+            exercise = col2.slider('Exercise(hours/week)', min_value=1,max_value=4, step=1, value=2)
+            systolic = col2.slider('Systolic blood presssure', min_value=105,max_value=135, step=1, value=110)
+            diastolic = col2.slider('Diastolic blood pressure', min_value=65,max_value=85, step=1, value=80)
+            BMI = col2.slider('Body mass Index', min_value=24,max_value=27, step=1, value=25)
 
+            gender = col3.selectbox('Gender', ['Male', 'Female'])
+            smoker = col3.selectbox('Smoker', ['Yes', 'No'])
 
+            input = np.array([[age,gender,height,weight,cholesterol,glucose,smoker,exercise,systolic,diastolic,BMI]])
 
-            TSH = col1.slider('TSH', min_value=0.005,max_value=530.0, step=0.01, value=100.0)
-            T3 = col1.slider('T3', min_value=0.05,max_value=18.0, step=0.01, value=12.0)
-            TT4 = col1.slider('TT4', min_value=2.0,max_value=60.0, step=0.01, value=30.0)
-            T4U = col1.slider('T4U', min_value=0.17,max_value=2.33, step=0.01, value=1.0)
-            FTI = col1.slider('FTI', min_value=1.4,max_value=881.0, step=0.01, value=300.0)
-            TBG = col1.slider('TBG', min_value=0.1,max_value=200.0, step=0.01, value=100.0)
-
-            I131_treatment = col2.selectbox('I131_treatment', ['True', 'False'])
-            query_hypothyroid = col2.selectbox('query_hypothyroid', ['True', 'False'])
-            query_hyperthyroid = col2.selectbox('query_hyperthyroid', ['True', 'False'])
-            lithium = col2.selectbox('lithium', ['True', 'False'])
-            goitre = col2.selectbox('goitre', ['True', 'False'])
-            tumor = col2.selectbox('tumor', ['True', 'False'])
-            hypopituitary = col2.selectbox('hypopituitary', ['True', 'False'])
-            psych = col2.selectbox('psych', ['True', 'False'])
-
-            sex = col3.selectbox('sex', ['Male', 'Female'])
-            on_thyroxine = col3.selectbox('on_thyroxine', ['True', 'False'])
-            query_on_thyroxine = col3.selectbox('query_on_thyroxine', ['True', 'False'])
-            on_antithyroid_meds = col3.selectbox('on_antithyroid_meds', ['True', 'False'])
-            sick = col3.selectbox('sick', ['True', 'False'])
-            if sex == 'Male':
-                pregnant = col3.selectbox('pregnant', ['False'])
-            else:
-                pregnant = col3.selectbox('pregnant', ['True', 'False'])
-
-            thyroid_surgery = col3.selectbox('thyroid_surgery', ['True', 'False'])
-            referral_source = col3.selectbox('referral_source', ['SVI', 'SVHC', 'STMW', 'SVHD', 'WEST', 'other'])
-
-            input = np.array([[age, sex, on_thyroxine, query_on_thyroxine, on_antithyroid_meds, sick,
-                                pregnant, thyroid_surgery, I131_treatment, query_hypothyroid, query_hyperthyroid,
-                                lithium, goitre, tumor, hypopituitary, psych, TSH, T3, TT4, T4U, FTI,
-                                TBG, referral_source]])
-
-            input = pd.DataFrame(input, columns=['age', 'sex', 'on_thyroxine', 'query_on_thyroxine', 'on_antithyroid_meds', 'sick',
-                                                    'pregnant', 'thyroid_surgery', 'I131_treatment', 'query_hypothyroid', 'query_hyperthyroid',
-                                                    'lithium', 'goitre', 'tumor', 'hypopituitary', 'psych', 'TSH', 'T3', 'TT4', 'T4U', 'FTI',
-                                                    'TBG', 'referral_source'])
+            input = pd.DataFrame(input, columns=['Age','Gender','Height(cm)','Weight(kg)',
+                                                 'Cholesterol(mg/dL)','Glucose(mg/dL)','Smoker',
+                                                 'Exercise(hours/week)','systolic_pressure',
+                                                 'diastolic_pressure','BMI'])
 
             predict = st.button('Make a Prediction')
 
@@ -101,7 +76,7 @@ class WebApp:
                     model_name = parameters['file_names']['model_file_name']
 
                     # Loading saved preprocess pipeline
-                    st.cache_data
+                    @st.cache_data
                     def load_preprocess(pipeline_foldername, pipeline_filename, le_transformer_filename):
                         with open(os.path.join(pipeline_foldername, pipeline_filename), 'rb') as f:preprocess_pipeline = dill.load(f)
                         with open(os.path.join(pipeline_foldername, le_transformer_filename), 'rb') as f:le_transformer = dill.load(f)
@@ -111,7 +86,7 @@ class WebApp:
                         pipeline_foldername, pipeline_filename, le_transformer_filename)
 
                     # Loading the saved machine learning model
-                    st.cache_data
+                    @st.cache_data
                     def load_model(model_foldername, model_name):
                         model = joblib.load(os.path.join(
                             model_foldername, model_name))
@@ -121,6 +96,7 @@ class WebApp:
 
                     # Preprocessing the input provided by the user
                     transformed_input = preprocess_pipeline.transform(input)
+                    
 
                     # Making predictions using the saved model and the preprocessed data
                     prediction = model.predict(transformed_input)
