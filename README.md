@@ -8,14 +8,9 @@
 ![](https://img.shields.io/github/license/MenAtwork-FMP/Heart_Health-Salud_Cardiaca)
 
 
-| Left Column | Right Column |
-|-------------|--------------|
-| Item 1      | Description 1|
-| Item 2      | Description 2|
-| Item 3      | Description 3|
-
-
-
+<div style="column-count: 2;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac felis non odio dictum feugiat. Integer quis est et lacus ultricies fermentum. Vivamus sed mi ac massa facilisis vestibulum. Quisque ac ullamcorper neque. Morbi auctor ex eu mauris efficitur, vel malesuada urna ultricies. Nullam et tempor enim. Sed luctus, ipsum at tempus ullamcorper, nisi ligula volutpat turpis, nec eleifend nulla sem vel ligula.
+</div>
 
 # Problem Statement:
 
