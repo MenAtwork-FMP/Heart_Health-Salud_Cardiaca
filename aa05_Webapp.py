@@ -36,12 +36,12 @@ class WebApp:
             st.title('Heart Attack Risk Assessment')
 
             # Adding a author name to the project
-            st.caption('A project by Deep Cognition Analytics ')
+            st.caption('A project by MenAtWork repo ')
 
             # Making Predictions
             st.header('Input data to assess heart attack risk')
-            st.markdown("Minimum and Maximum input values bound to a reduced sample of the subject studies")
-            st.markdown("Minimum and Maximum input values bound to a reduced sample of the subject studies")
+            st.markdown("Minimum and Maximum input values bound to the actual data of a reduced sample of the subjects studied")
+            st.markdown("The intent is to provide the concept of what can be further developed for specific use cases.")
 
             # Creating an interfact to get inputs from the user
             col1, col2, col3 = st.columns(3, gap='large')
