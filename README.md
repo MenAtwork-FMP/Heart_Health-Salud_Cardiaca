@@ -7,6 +7,16 @@
 ![](https://img.shields.io/github/directory-file-count/MenAtwork-FMP/Heart_Health-Salud_Cardiaca)
 ![](https://img.shields.io/github/license/MenAtwork-FMP/Heart_Health-Salud_Cardiaca)
 
+
+| Left Column | Right Column |
+|-------------|--------------|
+| Item 1      | Description 1|
+| Item 2      | Description 2|
+| Item 3      | Description 3|
+
+
+
+
 # Problem Statement:
 
 Heart Disease is among the most prevalent chronic diseases impacting millions of people around the world. Understanding the complex interplay of factors such as cholesterol levels, blood pressure, body mass index (BMI), physical activity levels, dietary habits, and family history of heart disease is crucial. These variables, among others, collectively contribute to an individual's overall risk profile for cardiovascular events. A holistic approach that considers these variables can provide a more accurate assessment of an individual's heart health and guide personalized interventions to reduce the risk of heart attacks.
@@ -21,7 +31,7 @@ Check out the deployed app at https://wip to come
 
 # Data used
 
-The original dataset was modified from the original.
+The utilized dataset was modified from the original.
 Get the project sample data from https://drive.google.com/file/d/1j48kuBVZ70pe_GsT97geOiE8ye7jpc4L/view?usp=drive_link  
 
 Or the original dataset version
