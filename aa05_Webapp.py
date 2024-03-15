@@ -27,7 +27,7 @@ class WebApp:
         try:
             st.set_page_config(
                 page_title="Heart Attack Risk Assessment",
-                page_icon=":butterfly",
+                page_icon=":heart",
                 layout="wide",
                 initial_sidebar_state="expanded",
             )
@@ -36,10 +36,12 @@ class WebApp:
             st.title('Heart Attack Risk Assessment')
 
             # Adding a author name to the project
-            st.caption('A project by Analytics ')
+            st.caption('A project by Deep Cognition Analytics ')
 
             # Making Predictions
-            st.header('Input your data to make a prediction')
+            st.header('Input data to assess heart attack risk')
+            st.markdown("Minimum and Maximum input values bound to a reduced sample of the subject studies")
+            st.markdown("Minimum and Maximum input values bound to a reduced sample of the subject studies")
 
             # Creating an interfact to get inputs from the user
             col1, col2, col3 = st.columns(3, gap='large')
@@ -64,7 +66,7 @@ class WebApp:
                                                  'Exercise(hours/week)','systolic_pressure',
                                                  'diastolic_pressure','BMI'])
 
-            predict = st.button('Make a Prediction')
+            predict = st.button('Run Assessment')
 
             # Actions after user clicks on 'Make a Prediction' button
             if predict:
@@ -101,11 +103,32 @@ class WebApp:
                     # Making predictions using the saved model and the preprocessed data
                     prediction = model.predict(transformed_input)
                     prediction = le_transformer.inverse_transform(prediction)
-
+                    prediction_prob = model.predict_proba(transformed_input)
 
                     # Showing the prediction made to the user
+                    
+
+                    if prediction == 0:
+                        if prediction_prob[0,0] >= 0.8:
+                            answer = "VERY LOW RISK"
+                        elif prediction_prob[0,0] >= 0.6:
+                            answer = "LOW RISK"
+                        else:
+                            answer = "LOW RISK"
+                    else:
+                        if prediction_prob[0,1] >= 0.9:
+                            answer = "VERY HIGH RISK"
+                        elif prediction_prob[0,1] >= 0.6:
+                            answer = "HIGH RISK"
+                        else:
+                            answer = "MODERATE RISK"
+                    
                     st.subheader(
-                        f"Patient's predicted condition:   {prediction}")
+                        f"Assessment scale:\n"
+                        f"VERY LOW >> LOW >> MODERATE >> HIGH >> VERY HIGH\n\n"
+                        f"Analyzing the given data there is a  {answer} of heart attack"
+                    )
+                    
 
         except Exception as e:
             raise e
