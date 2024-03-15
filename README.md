@@ -48,3 +48,52 @@ from https://www.kaggle.com/datasets/mahad049/heart-health-stats-dataset/downloa
 # Python Libraries and tools Used
 <img src="http://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=FFFFFF"> <img src = "https://img.shields.io/badge/-NumPy-013243?style=flat&logo=NumPy&logoColor=white"> <img src = "https://img.shields.io/badge/-Pandas-150458?style=flat&logo=pandas&logoColor=white"> <img src="http://img.shields.io/badge/-sklearn-F7931E?style=flat&logo=scikit-learn&logoColor=FFFFFF">  <img src = "https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white"> <img src = "https://img.shields.io/badge/-mlflow-0194E2?style=flat&logo=mlflow&logoColor=white"> <img src = "https://img.shields.io/badge/-Pydantic-000000?style=flat&logoColor=white">
 
+
+## To run the repository locally
+
+First, clone the repo
+```bash
+    git clone https://github.com/MenAtwork-FMP/Heart_Health-Salud_Cardiaca.git
+```
+
+Go to the project directory (for instance hearthealth), create a conda enviroment and activate it.Chande ".condaenv" for whatever name you want for the enviroment.
+
+```bash
+    cd hearthealth
+    conda create -n .condaenv python=3.10
+    conda activate .condaenv
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Run all the code. If you run aa00_Runrepo.py, the script will execute all the different steps sequentially.
+(aa01_Utility, aa02_Dataset, aa03_Preprocessing, aa04_Model)
+
+```bash
+  python aa00_Runrepo.py
+```
+
+Or you can run each python file individually to follow along the code
+
+Visualize the metrics in different experiments
+
+```bash
+  mlflow ui
+```
+
+Make predictions using trained model
+
+```bash
+  streamlit run webapp.py
+```
+
+## 🚀 About Me
+TBD.
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fabio-mena-5416264/)
