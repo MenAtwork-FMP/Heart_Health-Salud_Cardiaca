@@ -36,7 +36,7 @@ class WebApp:
             st.title('Heart Attack Risk Assessment')
 
             # Adding a author name to the project
-            st.caption('A project by MenAtWork repo ')
+            st.caption('A project by Nexus DataForge Analytics ')
 
             # Making Predictions
             st.header('Input data to assess heart attack risk')
@@ -109,6 +109,7 @@ class WebApp:
                     
 
                     if prediction == 0:
+                        predicted = "Negligible heart attack risk"
                         if prediction_prob[0,0] >= 0.8:
                             answer = "VERY LOW RISK"
                         elif prediction_prob[0,0] >= 0.6:
@@ -116,6 +117,7 @@ class WebApp:
                         else:
                             answer = "LOW RISK"
                     else:
+                        predicted = "Possible heart attack risk"
                         if prediction_prob[0,1] >= 0.9:
                             answer = "VERY HIGH RISK"
                         elif prediction_prob[0,1] >= 0.6:
@@ -124,8 +126,12 @@ class WebApp:
                             answer = "MODERATE RISK"
                     
                     st.subheader(
-                        f"Assessment scale:\n"
+                        f"Heart attack assessment scale:\n"
                         f"VERY LOW >> LOW >> MODERATE >> HIGH >> VERY HIGH\n\n"
+                    )
+
+                    st.subheader(
+                        f"Prediction: {predicted} \n"
                         f"Analyzing the given data there is a  {answer} of heart attack"
                     )
                     
