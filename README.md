@@ -29,7 +29,7 @@ La herramienta aquí desarrollada proporciona un concepto preliminar para madura
 
 # Deployed app link
 
-Check out the deployed app at https://wip to come
+Check out the deployed app at https://heartrisk.streamlit.app/
 
 # Data used
 
@@ -56,7 +56,7 @@ First, clone the repo
     git clone https://github.com/MenAtwork-FMP/Heart_Health-Salud_Cardiaca.git
 ```
 
-Go to the project directory (for instance hearthealth), create a conda enviroment and activate it.Chande ".condaenv" for whatever name you want for the enviroment.
+Go to the project directory (for instance hearthealth), create a conda enviroment and activate it. Change ".condaenv" for whatever name you want for the enviroment.
 
 ```bash
     cd hearthealth
